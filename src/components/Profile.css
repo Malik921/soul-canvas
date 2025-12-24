@@ -1,0 +1,267 @@
+/* THE CENTERED WRAPPER */
+.profile-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+
+  /* BACKGROUND IMAGE ADDED */
+    background: url("C:\Users\LENOVO\Desktop\sem project\soul-canvas\src\assets\WhatsApp Image 2025-12-21 at 5.45.07 PM.jpeg")
+    no-repeat center center; 
+  background-size: cover; 
+}
+
+/* THE CARD */
+.profile-card {
+  width: 100%;
+  max-width: 400px;
+  background: #ebcbb2;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  /* font-family: "Lobster Two", cursive; */
+  text-align: center;
+}
+
+/* BANNER */
+.profile-banner {
+  height: 100px;
+  background: #866042;
+}
+
+/* AVATAR */
+.avatar-container {
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-ring {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(135deg, #A0522D, #D2B48C);       /* PURE WHITE */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.user-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: linear-gradient(135deg, #A0522D, #D2B48C);      /* PURE WHITE */
+  border: none;              /* NO BORDER */
+}
+
+
+.image-edit-badge {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: linear-gradient(135deg, #A0522D, #D2B48C);
+  color: linear-gradient(135deg, #A0522D, #D2B48C);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+/* BODY */
+.profile-body {
+  padding: 20px 30px 40px;
+}
+
+.name-heading {
+  color: #7b563a;
+  font-size: 2.2rem;
+  margin: 10px 0 0;
+}
+
+.handle-text {
+  color: #6f8f7a;
+  margin-bottom: 20px;
+}
+
+/* BIO */
+.bio-section {
+  background: rgba(255, 255, 255, 0.35);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* STATS */
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(123, 86, 58, 0.25);
+  padding-top: 20px;
+  margin-bottom: 25px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  color: #7b563a;
+}
+
+.stat-label {
+  color: #6f8f7a;
+  font-size: 0.9rem;
+}
+
+/* BUTTON */
+.profile-btn {
+  background: linear-gradient(135deg, #6f8f7a, #7f9c8a);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(111, 143, 122, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 350px;
+  margin-bottom: 11px;
+}
+
+.profile-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+} 
+
+/* EDIT CARD OVERLAY */
+.edit-card-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.edit-input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  font-family: inherit;
+  outline: none;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.edit-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #866042;
+  font-size: 0.95rem;
+}
+
+/* GRADIENT CARD EFFECTS */
+.profile-card {
+  background: linear-gradient(
+    180deg,
+    #f4dfcc 0%,
+    #edd2ba 55%,
+    #e6c3a6 100%
+  );
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.profile-banner {
+  background: linear-gradient(
+    90deg,
+    #7b563a,
+    #9b6b47,
+    #7b563a
+  );
+}
+
+/* AVATAR RING */
+  /* .avatar-ring::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9b6b47, #6f8f7a);
+  z-index: -1;
+} */
+
+ /* background: linear-gradient(135deg, #9b6b47, #6f8f7a); */
+
+ .logout-profile-btn {
+  margin-top: 12px;
+  background: linear-gradient(135deg, #ff6b6b, #ff3d3d);
+  color: white;
+}
+
+.logout-profile-btn:hover {
+  background: linear-gradient(135deg, #ff3d3d, #d32f2f);
+  transform: scale(1.03);
+}
+
+.avatar-selection-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.avatar-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.2s ease;
+  object-fit: cover;
+}
+
+.avatar-option:hover {
+  transform: scale(1.1);
+}
+
+.active-avatar {
+  border-color: #ffb7c5; /* Or your main theme color */
+  transform: scale(1.1);
+}
+
+.selection-label {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 5px;
+}

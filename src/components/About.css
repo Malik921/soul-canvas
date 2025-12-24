@@ -1,0 +1,81 @@
+/* PAGE BACKGROUND – DARK BRONZE */
+.about-wrapper {
+  padding: 60px 70px; /* 🔽 less outer space → card feels larger */
+
+  background: linear-gradient(
+    135deg,
+    #f5d6b4
+  );
+}
+
+/* SINGLE ABOUT CARD – OCCUPIES MORE AREA */
+.about-card {
+  display: flex;
+  align-items: center;
+
+  padding: 55px 60px;
+  border-radius: 36px;
+
+  background: rgba(106, 127, 112, 0.85);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  /* 🔥 MAKE CARD BIGGER VISUALLY */
+  margin: -20px;   /* expands on all sides */
+}
+
+/* LEFT – TEXT */
+.about-text {
+  flex: 2;
+  padding-right: 40px;
+}
+
+.about-text h2 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 22px;
+  color: #f6f3ef;
+}
+
+.about-text p {
+  font-size: 17px;
+  line-height: 1.95;
+  margin-bottom: 18px;
+  color: #f3efe9;
+}
+
+/* RIGHT – IMAGE */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 26px;
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-wrapper {
+    padding: 40px 20px;
+  }
+
+  .about-card {
+    flex-direction: column;
+    padding: 45px 30px;
+    margin: 0; /* reset on mobile */
+  }
+
+  .about-text {
+    padding-right: 0;
+    text-align: center;
+  }
+}
+.about-text h2 {
+  text-align: center;
+}

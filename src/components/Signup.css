@@ -1,0 +1,141 @@
+/* ======================== */
+/* SIGNUP CARD */
+/* ======================== */
+.signup-box {
+  width: 720px;
+  display: flex;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* ======================== */
+/* IMAGE SECTION */
+/* ======================== */
+.signup-image {
+  width: 40%;
+  background: #92b99d;
+  position: relative; /* anchor for text */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-welcome-text {
+  position: absolute;
+  top: 18px; /* move up/down freely */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Dancing Script", cursive;
+  font-size: 35px;
+  color: #4f6658;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.signup-image img {
+  width: 100%;
+  margin-top: 10px;
+  float: inline-end;
+}
+
+/* ======================== */
+/* FORM SECTION */
+/* ======================== */
+.signup-form {
+  width: 55%;
+  padding: 30px;
+}
+
+.signup-form h2 {
+  color: #906747;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.signup-form button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #866042;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+/* ======================== */
+/* ERRORS & SWITCH */
+/* ======================== */
+.signup-error {
+  font-size: 12px;
+  color: red;
+}
+
+.signup-switch-text span {
+  color: #866042;
+  cursor: pointer;
+}
+
+/* ======================== */
+/* CUTE PROMPT */
+/* ======================== */
+.signup-cute-prompt {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffe0f0;
+  color: #d63384;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1010;
+  animation: pop 0.3s ease-out;
+}
+.welcome{
+ position: absolute;
+  top: 18px; /* move up/down freely */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Dancing Script", cursive;
+  font-size: 35px;
+  color: #4f6658;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.eye-icon:hover {
+  opacity: 1;
+}
+@keyframes pop {
+  0% {
+    transform: translateX(-50%) scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}

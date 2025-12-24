@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Apricot";
+  src: url("/fonts/Apricot-BF650c4a6357ce1.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.cookie-heading {
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+}
+
+.cookie-subtitle {
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  font-style: italic; /* optional */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}

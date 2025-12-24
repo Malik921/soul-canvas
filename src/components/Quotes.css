@@ -1,0 +1,211 @@
+/* =========================
+   RESET
+========================= */
+
+
+body {
+
+/* =========================
+   SECTION
+========================= */
+
+.quotes-section {
+
+  width: 100%;
+  padding: 40px;
+  margin-right: 250px;
+    margin: 0;
+  font-family: 'Poppins', sans-serif;
+
+  /* background: linear-gradient(
+    135deg,
+    #40724e 0%,
+    #5f7f5c 40%,
+    #866042 100%
+  ); */
+  background-color: #6a7f70;
+}
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  color: #f5eee8;
+  margin-bottom: 30px;
+  font-family: "Apricot", cursive;
+}
+
+/* =========================
+   BACK BUTTON (ENHANCED)
+========================= */
+
+.back-btn {
+  margin: 0 auto 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: linear-gradient(135deg, #8b6345, #6f4d34);
+  color: #ffffff;
+
+  border: none;
+  padding: 12px 26px;
+  border-radius: 40px;
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.22),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+  transition: all 0.35s ease;
+}
+
+.back-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+.back-btn:active {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.quotes-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.quote-card {
+  background: #ffffff;
+  padding: 28px 22px;
+  border-radius: 18px;
+  text-align: center;
+
+  border-top: 5px solid #866042;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.quote-icon {
+  font-size: 26px;
+  color: #40724e;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.quote-card h3 {
+  font-size: 25px;
+  color: #866042;
+  margin-bottom: 8px;
+   font-family: "Cookie", cursive;
+}
+
+.quote-card p {
+  font-size: 12.5px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   EXPLORE BUTTON (ENHANCED)
+========================= */
+
+.explore-btn {
+  margin-top: auto;
+  align-self: center;
+
+  background: linear-gradient(135deg, #8b6345, #6f4d34);
+  color: #ffffff;
+
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+  transition: all 0.35s ease;
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+.explore-btn:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+  .quotes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .quotes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .quotes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quotes-section {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}

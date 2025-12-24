@@ -1,0 +1,182 @@
+/* ======================== */
+/* LOGIN PAGE CSS FIXED      */
+/* ======================== */
+
+/* BACKGROUND OVERLAY */
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* CENTER CARD */
+.auth-box {
+  width: 720px;
+  max-width: 95%; /* responsive fix */
+  display: flex;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  position: relative; /* for cute prompt */
+}
+
+/* LEFT IMAGE */
+/* LEFT IMAGE CONTAINER */
+.auth-image {
+  width: 40%;
+  min-width: 180px;
+  max-width: 280px;
+  background-color: #94b49f; /* The green from your screenshot */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* This aligns the image content to the right */
+  overflow: visible; /* Changed from hidden to allow the bear to overlap slightly */
+  position: relative;
+}
+
+.auth-image img {
+  height: auto;
+  width: auto; /* Allow the image to define its own width */
+  max-width: 130%; /* Allow it to be slightly wider than the green box */
+  
+  /* Use translate to manually nudge the bear to the right */
+  /* Increase the 15px if it still needs to move more */
+  transform: translateX(90px); 
+  
+  /* Ensures the bear sits on top of the form border */
+  position: relative;
+  z-index: 5; 
+}
+
+/* RIGHT FORM */
+.auth-form {
+  width: 60%;
+  padding: 30px;
+}
+
+h2 {
+  color: #906747;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.close-btnn {
+ width: 50px;
+    margin-bottom: 25px;
+    padding: 10px;
+    background: #866042;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 900;
+    float: right;
+
+} 
+.loginbutton{
+   width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #866042;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+  margin-top: 2px;
+  display: block;
+}
+
+.switch-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.switch-text span {
+  color: #866042;
+  cursor: pointer;
+}
+
+/* ======================== */
+/* CUTE PROMPT STYLE ADDED  */
+/* ======================== */
+.cute-prompt {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffe0f0;
+  color: #d63384;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 1010;
+  animation: pop 0.3s ease-out;
+}
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding-right: 40px; /* space for the eye */
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+@keyframes pop {
+  0% { transform: translateX(-50%) scale(0.7); opacity: 0; }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+
+/* ======================== */
+/* RESPONSIVE FIXES         */
+/* ======================== */
+@media (max-width: 800px) {
+  .auth-box {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .auth-image {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .auth-image img {
+    height: 100%;
+  }
+
+  .auth-form {
+    width: 100%;
+    padding: 20px;
+  }
+}

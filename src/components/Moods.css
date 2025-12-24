@@ -1,0 +1,296 @@
+/* ===== MOOD PAGE ===== */
+.moods-page {
+  height: 100vh;
+  width: 100vw;
+  background: #6a7f70;
+  display: flex;
+}
+
+/* MAIN CARD FULL PAGE */
+.main-card {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  gap: 40px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* LEFT COLUMN */
+.left-cards {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* LEFT MOOD CARDS */
+.mood-card {
+  flex: 1;
+  min-height: 0;
+  background: #866042;
+  color: #f3f0eb;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+.mood-card:first-child {
+  margin-bottom: 30px;
+}
+
+/* RIGHT IMAGE */
+.right-image {
+  flex: 1;
+  height: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SOUL CANVAS BUTTON */
+.mood-btn {
+  margin-top: auto;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  background: linear-gradient(135deg, #40724e, #3f523f);
+  color: #f3f0eb;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.mood-btn:hover {
+  background: linear-gradient(135deg, #3f523f, #2f3f34);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.mood-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.mood-btn:focus-visible {
+  outline: 2px solid #d8e2d0;
+  outline-offset: 3px;
+}
+
+/* MODAL OVERLAY BASE */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(31, 45, 36, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* ===== CALENDAR MODAL ===== */
+.calendar-modal {
+  background: #1f2d24;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  animation: scaleFadeIn 0.3s ease;
+}
+
+/* ===== MOOD SELECTOR MODAL ===== */
+.mood-selector-modal {
+  background: #2f3f34;
+  padding: 90px;
+  border-radius: 25px;
+  text-align: center;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  animation: scaleFadeIn 0.3s ease;
+}
+
+.mood-selector-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mood-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.mood-option-btn {
+  padding: 12px 20px;
+  font-size: 24px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, #40724e, #3f523f);
+  color: #f3f0eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+}
+
+.mood-option-btn:hover {
+  background: linear-gradient(135deg, #3f523f, #2f3f34);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.mood-option-btn.selected {
+  border: 2px solid #ffffff;
+  transform: scale(1.05);
+}
+
+/* ===== TRACK MOOD FILTER (UNCHANGED) ===== */
+.track-mood-filter {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.track-mood-filter select {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid #f3f0eb;
+  font-size: 16px;
+  background: linear-gradient(135deg, #40724e, #3f523f);
+  color: #f3f0eb;
+  cursor: pointer;
+  outline: none;
+  font-weight: 500;
+  min-width: 140px;
+}
+
+/* ===== ✅ ADDED: TRACK MOOD CARD ===== */
+.track-mood-modal {
+  background: #1f2d24;
+  padding: 30px;
+  border-radius: 25px;
+  width: 520px;
+  max-width: 90%;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  animation: scaleFadeIn 0.3s ease;
+  text-align: center;
+}
+
+/* ===== ✅ ADDED: TRACK MOOD LIST ===== */
+.track-mood-list {
+  max-height: 350px;
+  overflow-y: auto;
+  margin-top: 20px;
+  padding-right: 5px;
+}
+
+.track-mood-item {
+  background: linear-gradient(135deg, #40724e, #3f523f);
+  padding: 14px 18px;
+  border-radius: 18px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f3f0eb;
+  font-size: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* ===== MOOD REASON TEXTAREA ===== */
+.mood-reason-textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #3f523f, #2f3f34);
+  color: #f3f0eb;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+  margin-top: 15px;
+}
+
+/* ===== REACT CALENDAR ===== */
+.react-calendar {
+  border: none !important;
+  width: 100%;
+  max-width: 500px;
+  background: #3e2723 !important;
+  border-radius: 20px;
+  padding: 15px;
+  color: #ffffff !important;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes scaleFadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.react-calendar__navigation button:hover{
+  color : black
+}
+.react-calendar__tile:hover{
+  color : black
+}
+
+/* Toast overlay above everything */
+.toast-overlay {
+  position: fixed;
+  inset: 0; /* top:0; bottom:0; left:0; right:0 */
+  display: flex;
+  align-items: flex-start; /* start from top */
+  justify-content: center;
+  padding-top: 50px; /* space from top */
+  z-index: 99999; /* above calendar modal */
+  pointer-events: none; /* doesn’t block clicks */
+}
+
+.toast-message {
+  background: #40724e;
+  color: #f3f0eb;
+  padding: 18px 30px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  animation: toastFade 0.3s ease-in-out;
+}
+
+/* Smooth fade animation */
+@keyframes toastFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

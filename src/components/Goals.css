@@ -1,0 +1,373 @@
+/* PAGE WRAPPER */
+.goals-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 70px;
+  background: linear-gradient(135deg, #f5d6b4);
+  box-sizing: border-box;
+}
+
+/* MAIN GOALS CARD */
+.goals-card {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  padding: 55px 60px;
+  border-radius: 36px;
+  background: rgba(106, 127, 112, 0.85);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* WHITE LOGIC CARD */
+.logic-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 28px;
+  flex: 1.8;
+  max-width: 720px;
+  min-width: 0; /* 🔥 FIX FLEX OVERFLOW */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+/* RIGHT IMAGE */
+.goals-image {
+  flex-shrink: 0;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.goals-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  border-radius: 26px;
+  object-fit: cover;
+}
+
+/* INPUT AREA */
+.goal-input-wrapper {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+/* INPUT */
+.goal-input-wrapper input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #6a7f70;
+  background-color: #f7f4ef;
+  color: #866042;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  outline: none;
+}
+
+/* SELECT */
+.goal-input-wrapper select {
+  width: 140px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #6a7f70;
+  background-color: #f7f4ef;
+  color: #866042;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  appearance: none;
+  padding-right: 35px;
+}
+
+/* ADD GOAL BUTTON */
+.goal-input-wrapper button {
+  flex-shrink: 0;
+  width: 110px;
+  max-width: 110px;
+  padding: 12px 0;
+  border-radius: 10px;
+  background: #866042;
+  color: #f2f3f2;
+  border: none;
+  cursor: pointer;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+}
+
+/* SECTIONS */
+.subtitle {
+  color: #6a7f70;
+  margin-bottom: 30px;
+}
+
+.goals-section {
+  margin-top: 25px;
+  padding-left: 50px;
+}
+
+.goals-section h2 {
+  color: #866042;
+  border-bottom: 2px solid #6a7f70;
+  padding-bottom: 5px;
+  max-width: 90%;
+}
+
+/* GOAL CARD */
+.goal-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   background: #bce1cc;
+  padding: 12px 16px;
+  margin-top: 10px;
+  border-radius: 12px;
+  width: 90%;
+  color: white;
+}
+
+/* COMPLETED */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* DELETE BUTTON (FIXED SIZE) */
+.delete-btn {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+ background: #866042;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  background: #ffffff;
+  color: #866042;
+}
+
+/* FOOTER */
+.footer-text {
+  text-align: center;
+  margin-top: 30px;
+  color: #6a7f70;
+  font-style: italic;
+}
+
+/* CONFIRM DELETE MODAL */
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.confirm-box {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  animation: pop 0.25s ease-out;
+}
+
+.confirm-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.confirm-actions button {
+  padding: 8px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* CONFIRM DELETE */
+.confirm-actions button:first-child {
+  background: #866042;
+  color: white;
+}
+
+/* ❌ CANCEL BUTTON (UPDATED COLOR) */
+.confirm-actions button:last-child {
+  background: #e6e1dc; /* soft beige */
+  color: #6a7f70;
+}
+
+/* UNDO SNACKBAR */
+.undo-snackbar {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #6a7f70;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 500;
+  z-index: 2000;
+}
+
+.undo-snackbar span {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* ANIMATION */
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .goals-card {
+    flex-direction: column;
+    padding: 45px 30px;
+  }
+
+  .goal-input-wrapper {
+    flex-direction: column;
+  }
+
+  .goal-input-wrapper input,
+  .goal-input-wrapper select,
+  .goal-input-wrapper button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .goals-image {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .goals-image img {
+    height: auto;
+  }
+}
+
+/* HEADING */
+.logic-card h1 {
+  font-family: "Cookie", cursive;
+  font-size: 30px;
+  color: #866042;
+}
+/* GOAL TEXT COLOR FIX */
+.goal-card label {
+  color: #000000; /* black text */
+  font-weight: 600;
+   font-family: "Lobster Two", sans-serif;
+}
+
+/* Keep completed goals readable */
+.goal-card label.completed {
+  color: #2f2f2f;
+}
+/* ALIGN GOAL CONTENT PROPERLY */
+.goal-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LABEL: text + checkbox */
+.goal-card label {
+  display: flex;
+  align-items: center;
+  gap: 10px;           /* space between checkbox & text */
+  color: #000;
+  font-weight: 600;
+  flex: 1;
+}
+
+/* CHECKBOX STYLE FIX */
+.goal-card input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE ACTIONS (checkbox + delete) */
+.goal-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* GOAL TEXT */
+.goal-text {
+  color: #000;
+  font-weight: 600;
+  flex: 1;
+   font-family: "Lobster Two", sans-serif;
+}
+
+/* COMPLETED TEXT */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* ACTIONS (RIGHT SIDE) */
+.goal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* COMPLETE BUTTON – SAME STYLE AS ADD GOAL */
+.complete-btn {
+  background: #866042;
+  color: #f2f3f2;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+/* WHEN COMPLETED */
+.complete-btn.done {
+  background: #6a7f70;
+}
+
+.complete-btn:hover {
+  background: #ffffff;
+  color: #866042; /* brown text */
+}

@@ -1,0 +1,112 @@
+.memory-wrapper {
+  min-height: 100vh;
+  margin-left:20px;
+  width:1000px ;
+  background: #f5f0eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.memory-card {
+  width: 100%;
+  max-width: 850px;
+  background: #fffaf4;
+  padding: 40px;
+  border-radius: 26px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.memory-title {
+  text-align: center;
+  font-size: 28px;
+  color: #5a4a42;
+  margin-bottom: 30px;
+}
+
+.memory-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #5a4a42;
+  margin-bottom: 18px;
+}
+
+.memory-label input,
+.memory-label textarea {
+  margin-top: 8px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #e2d2c2;
+  font-size: 15px;
+  outline: none;
+}
+
+.memory-label textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.memory-tags {
+  margin: 24px 0;
+}
+
+.memory-tags p {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #5a4a42;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;          /* allows wrapping, not vertical stack */
+  gap: 10px;
+  align-items: center;
+}
+
+.tag-list button {
+  display: inline-flex;     /* ✅ important */
+  align-items: center;
+  justify-content: center;
+  width: auto;              /* ✅ prevents full width */
+  white-space: nowrap;      /* keeps text on one line */
+
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #b39e89;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.tag-list button.active {
+  background: #a58b7f;
+  color: white;
+}
+
+.memory-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.memory-actions .primary {
+  background: rgb(91, 61, 4);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.memory-actions .secondary {
+  background: rgb(91, 61, 4);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 16px;
+  cursor: pointer;
+}

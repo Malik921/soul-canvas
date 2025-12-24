@@ -1,0 +1,419 @@
+/* ================= PAGE CONTAINER ================= */
+
+.diary-container {
+  min-height: 100vh;
+  background-color: #6a7f70;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+.diary-layout {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.diary-content {
+  flex: 1;
+}
+
+/* ================= RIGHT IMAGE ================= */
+
+.diary-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diary-image img {
+  width: 100%;
+  max-width: 420px;
+  object-fit: contain;
+}
+
+/* ================= WELCOME SECTION ================= */
+
+.welcome-box {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.diary-heading {
+  font-size: 2.6rem;
+  color: rgb(93, 93, 2);
+  margin-bottom: 18px;
+}
+
+.diary-text {
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.diary-prompt {
+  font-size: 1.25rem;
+  color: #6b4f3f;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* ================= FORM BOX ================= */
+
+.form-box {
+  background-color: #f5d6b4;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 1700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  margin-left: 120px;
+  width: 900px;
+
+}
+
+.form-heading {
+  text-align: center;
+  color: rgb(93, 93, 2);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* ================= FORM STRUCTURE ================= */
+
+.diary-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.diary-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.diary-form input,
+.diary-form select {
+  margin-top: 8px;
+  padding: 11px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.diary-form input:focus,
+.diary-form select:focus {
+  border-color: rgb(93, 93, 2);
+}
+
+/* ================= LOCK OPTIONS ================= */
+
+.diary-form label:has(input[type="radio"]) {
+      display: flex
+;
+    /* flex-direction: row-reverse; */
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f3e8;
+    padding: 14px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    width: 500px;
+}
+
+.diary-form label input[type="radio"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.diary-form label:has(input[type="radio"]:checked) {
+  border-color: rgb(93, 93, 2);
+  background: #f5e8d3;
+}
+
+/* ================= FORM BUTTON ================= */
+
+.diary-form button {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    rgb(91, 61, 4),
+    rgb(148, 102, 9)
+  );
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s;
+}
+
+.diary-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.diary-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ================= PAGE TYPE STEP ================= */ .page-center { margin-left: auto; margin-right: auto; } .page-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 22px 0; } .page-card { background: #f9f3e8; padding: 18px; border-radius: 14px; cursor: pointer; border: 2px solid transparent; transition: transform 0.2s ease, box-shadow 0.2s ease; text-align: center; } .page-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15); } .page-card.selected { border-color: rgb(93, 93, 2); background: #f5e8d3; } .page-icon { font-size: 1.8rem; display: block; margin-bottom: 8px; } .page-card h4 { margin: 6px 0; color: rgb(71, 71, 2); font-size: 1.05rem; } .page-card p { font-size: 0.85rem; color: #555; } /* Continue button */ .page-continue { margin-top: 22px; width: 100%; padding: 14px 20px; background: linear-gradient( 135deg, rgb(94, 54, 3), rgb(88, 53, 0) ); color: #fff; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.6px; border: none; border-radius: 18px; cursor: pointer; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22); transition: all 0.25s ease; } .page-continue:hover:not(:disabled) { transform: translateY(-3px) scale(1.03); box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28); } .page-continue:active:not(:disabled) { transform: scale(0.97); } .page-continue:disabled { opacity: 0.45; cursor: not-allowed; box-shadow: none; } /* ================= CENTER PAGE TYPE STEP ================= */ .diary-layout:has(.page-center) { justify-content: center; } .diary-layout:has(.page-center) .diary-content { flex: unset; } /* ================= RESPONSIVE ================= */ @media (max-width: 900px) { .diary-layout { flex-direction: column; gap: 30px; } .diary-image { display: none; } .form-box { margin-left: 0; } }
+
+/* ================= JOURNAL STYLE STEP ================= */
+
+.journal-style-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  background: #f9f4ee;
+  padding: 26px;
+  border-radius: 22px;
+  margin-top: 22px;
+ 
+}
+
+.style-option {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 16px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.style-option:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.style-option.selected {
+  border-color: rgb(93, 93, 2);
+  background: #f3f7ed;
+}
+
+.page-icon {
+  font-size: 34px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.style-option h4 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #4a3f35;
+}
+
+.style-option p {
+  font-size: 13px;
+  color: #7a6f65;
+  line-height: 1.4;
+}
+
+/* ================= CONTINUE BUTTON ================= */
+
+.page-continue {
+  margin-top: 24px;
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(
+    135deg,
+    rgb(84, 53, 7),
+    rgb(116, 66, 14)
+  );
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  transition: all 0.25s ease;
+}
+
+.page-continue:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+}
+
+.page-continue:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ================= CENTER ALIGN FIX ================= */
+
+.diary-layout:has(.page-center) {
+  justify-content: center;
+}
+
+.diary-layout:has(.page-center) .diary-content {
+  flex: unset;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .journal-style-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diary-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .diary-image {
+    display: none;
+  }
+
+  .form-box {
+    margin-left: 0;
+  }
+}
+/* ================= COLOR PICKER (STEP 5) ================= */
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.color-card {
+  width: 100%;
+  height: 70px;
+  border-radius: 14px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.color-card.selected {
+  border-color: rgb(93, 93, 2);
+  box-shadow: 0 0 0 3px rgba(93, 93, 2, 0.25);
+}/* =========================
+   PAGE NAVIGATION BUTTONS
+========================= */
+.page-back,
+.page-continue {
+   margin-top: 24px;
+  width: 100%;
+  padding: 14px 20px;
+    font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  transition: all 0.25s ease;
+}
+
+.page-back {
+  background-color: rgb(84, 53, 7); /* pastel peach */
+  color:  rgb(255, 255, 255);
+}
+
+.page-back:hover {
+  background-color: #f0dcbc;
+}
+
+.page-continue {
+  background-color: #b7dfc2; /* pastel green */
+  color: rgb(240, 240, 240);
+}
+
+.page-continue:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+  color: #888;
+}
+
+.page-continue:hover:not(:disabled) {
+  background-color: #a7d5b5;
+}
+
+/* Add spacing for buttons container */
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Cute Toast Notification */
+.cute-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ffb7c5;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  z-index: 10000;
+  animation: slideIn 0.5s ease-out;
+  font-weight: bold;
+}
+
+/* Modal Overlay */
+.cute-modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.cute-modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 400px;
+  border: 4px solid #ffb7c5;
+}
+
+.cute-modal-icon { font-size: 50px; margin-bottom: 10px; }
+
+.cute-modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cute-btn-yes { background: #ff4d4d; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; }
+.cute-btn-no { background: #f0f0f0; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; }
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
