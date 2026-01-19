@@ -1,61 +1,6 @@
-// const API_URL = "http://localhost:5000/api";
 
-// export const loginUser = async (data) => {
-//   const res = await fetch(`${API_URL}/auth/login`, {
-//     method: "POST",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify(data),
-//   });
-//   return res.json();
-// };
-
-// export const signupUser = async (data) => {
-//   const res = await fetch(`${API_URL}/auth/signup`, {
-//     method: "POST",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify(data),
-//   });
-//   return res.json();
-// };
-
-// export const fetchProfile = async (token) => {
-//   const res = await fetch(`${API_URL}/users/profile`, {
-//     headers: { Authorization: `Bearer ${token}` },
-//   });
-//   return res.json();
-// };
-
-// const API_URL = "http://localhost:5000/api/auth";
-
-// export const signupUser = async (data) => {
-//   try {
-//     const res = await fetch(`${API_URL}/signup`, {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(data)
-//     });
-//     return await res.json();
-//   } catch (err) {
-//     console.error(err);
-//     throw err;
-//   }
-// };
-
-// export const loginUser = async (data) => {
-//   try {
-//     const res = await fetch(`${API_URL}/login`, {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(data)
-//     });
-//     return await res.json();
-//   } catch (err) {
-//     console.error(err);
-//     throw err;
-//   }
-// };
-
-const API_URL = "http://127.0.0.1:5000/api/auth";
+//const API_URL = "http://127.0.0.1:5000/api/auth";
+const API_URL = "https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/auth";
 
 export const signupUser = async (data) => {
   try {

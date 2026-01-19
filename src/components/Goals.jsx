@@ -27,9 +27,13 @@ function Goals() {
 
   const fetchGoals = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/goals", {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-      });
+  const res = await axios.get(
+    "https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/goals",
+    {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    }
+  );
+
       setGoals(res.data);
     } catch (err) {
       console.error("Error fetching goals:", err);
@@ -39,12 +43,13 @@ function Goals() {
   /* ADD GOAL */
   const addGoal = async () => {
     if (!goalText.trim()) return;
-    try {
-      const res = await axios.post(
-        "http://localhost:5000/api/goals",
-        { text: goalText, type: goalType },
-        { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
-      );
+   try {
+  const res = await axios.post(
+    "https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/goals",
+    { text: goalText, type: goalType },
+    { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
+  );
+
       setGoals([...goals, res.data]);
       setGoalText("");
     } catch (err) {
@@ -60,12 +65,13 @@ function Goals() {
   /* TOGGLE */
   const toggleGoal = async (id) => {
     try {
-      const goal = goals.find((g) => g._id === id);
-      const res = await axios.put(
-        `http://localhost:5000/api/goals/${id}`,
-        { completed: !goal.completed },
-        { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
-      );
+  const goal = goals.find((g) => g._id === id);
+  const res = await axios.put(
+    `https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/goals/${id}`,
+    { completed: !goal.completed },
+    { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
+  );
+
       setGoals(goals.map((g) => (g._id === id ? res.data : g)));
     } catch (err) {
       console.error("Error toggling goal:", err);
@@ -90,9 +96,10 @@ const confirmDelete = async () => {
 
   try {
     await axios.delete(
-      `http://127.0.0.1:5000/api/goals/${goalToDelete._id}`,
-      { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
-    );
+  `https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/goals/${goalToDelete._id}`,
+  { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
+);
+
 
     // Update UI
     setGoals(goals.filter((g) => g._id !== goalToDelete._id));
@@ -118,12 +125,12 @@ const undoDelete = async () => {
   try {
     // Re-create the goal in the database so it gets a new valid ID
     const res = await axios.post(
-      "http://127.0.0.1:5000/api/goals",
-      { 
-        text: undoGoal.text, 
-        type: undoGoal.type,
-        completed: undoGoal.completed 
-      },
+  "https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/goals",
+  { 
+    text: undoGoal.text, 
+    type: undoGoal.type,
+    completed: undoGoal.completed 
+  },
       { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
     );
 
