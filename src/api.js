@@ -1,5 +1,4 @@
 
-//const API_URL = "http://127.0.0.1:5000/api/auth";
 const API_URL = "https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/auth";
 
 export const signupUser = async (data) => {
