@@ -74,7 +74,7 @@ const Profile = () => {
       data.append("profilePicUrl", profileImg); 
 
       const response = await axios.put(
-  `https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/auth/update/${user._id}`,
+ `${import.meta.env.VITE_API_URL} /api/auth/update/${user._id}`,
   data
 );
 

@@ -82,7 +82,7 @@ function Diary() {
     const fetchPages = async () => {
       try {
   const res = await axios.get(
-    "https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/diary",
+     `${import.meta.env.VITE_API_URL}/api/diary`,
     {
       headers: { Authorization: `Bearer ${token}` },
     }
@@ -111,7 +111,7 @@ function Diary() {
    try {
   const finalPassword = lockType === "password" ? password : pin;
   const res = await axios.put(
-    `https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/auth/update/${user._id}`,
+     `${import.meta.env.VITE_API_URL}/api/auth/update/${user._id}`,
     {
       diaryPassword: finalPassword,
     }
@@ -135,11 +135,12 @@ function Diary() {
       const config = { headers: { Authorization: `Bearer ${token}` } };
 
 if (editingPage) {
-  const res = await axios.put(
-    `https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/diary/${editingPage._id}`,
-    pageData,
-    config
-  );
+ const res = await axios.put(
+  `${import.meta.env.VITE_API_URL}/api/diary/${editingPage._id}`,
+  pageData,
+  config
+);
+
   setSavedPages((prev) =>
     prev.map((p) => (p._id === editingPage._id ? res.data : p))
   );
@@ -166,7 +167,7 @@ if (editingPage) {
   const confirmDelete = async () => {
     try {
      await axios.delete(
-  `https://b8094b66-4cc1-4972-8c77-31cd8e70f560-00-abi5h71rz1rr.pike.replit.dev/api/diary/${deletePageId}`,
+`${import.meta.env.VITE_API_URL}//api/diary/${deletePageId}`,
   {
     headers: { Authorization: `Bearer ${token}` },
   }
