@@ -1,4 +1,4 @@
-import "./quotes.css";
+import "./Quotes.css";
 import { useState } from "react";
 import Navbar from "./Navbar.jsx"
 import Footer from "./Footer.jsx"
